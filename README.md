@@ -18,12 +18,12 @@
 - 本次所使用数据集
   - [下载地址](https://pan.baidu.com/s/1T5EfBovMnpe4meIYcXSa8w)
 - 数据集说明
-  - 1. 提供的是我的百度网盘地址，如果下载有问题可以直接联系我。邮箱：zzubqh@gmail.com
-  - 2. 本次使用数据集压缩包里有两个压缩文件，Denselevel.rar为标注好的图片密度等级，分成3个等级 0：不包含任何人的图片；1：包含的人员数小于100；2：包含的人员数大于100。img文件夹中是图片，dense_gt.mat是标签文件
-  - 3. Crowdata.rar为标注好的人头位置信息的数据集。img文件夹中是图片，crow.mat是标签文件
-  - 4. 项目中包含了一个使用vs2007开发的CrawDenseTool项目，用来给图片的密度等级打标签。修改源码中的图片目录地址然后重新编译后即可使用，快捷键A,D为上一张/下一张，方向键"上/下"为标签选择，"保存"按钮保存的文件以当前时间命名。
-  - 5. 项目中的tools.py文件，函数create_denselevelLabel()提供了将CrawDenseTool项目保存的文件转换成标签文件的功能；函数create_crowLabel()提供了将labelme工具生成的json文件转换成标签文件的功能。
-  - 6. 生成自己的数据集时，首先使用labelme工具对图片中的人头进行标记，然后利用函数create_crowLabel()函数转换即可。  
+  - 提供的是我的百度网盘地址，如果下载有问题可以直接联系我。邮箱：zzubqh@gmail.com
+  - 本次使用数据集压缩包里有两个压缩文件，Denselevel.rar为标注好的图片密度等级，分成3个等级 0：不包含任何人的图片；1：包含的人员数小于100；2：包含的人员数大于100。img文件夹中是图片，dense_gt.mat是标签文件
+  - Crowdata.rar为标注好的人头位置信息的数据集。img文件夹中是图片，crow.mat是标签文件
+  - 项目中包含了一个使用vs2007开发的CrawDenseTool项目，用来给图片的密度等级打标签。修改源码中的图片目录地址然后重新编译后即可使用，快捷键A,D为上一张/下一张，方向键"上/下"为标签选择，"保存"按钮保存的文件以当前时间命名。
+  - 项目中的tools.py文件，函数create_denselevelLabel()提供了将CrawDenseTool项目保存的文件转换成标签文件的功能；函数create_crowLabel()提供了将labelme工具生成的json文件转换成标签文件的功能。
+  - 生成自己的数据集时，首先使用labelme工具对图片中的人头进行标记，然后利用函数create_crowLabel()函数转换即可。  
 
 ## 环境配置
 - 基于Python3.6
