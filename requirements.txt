@@ -1,0 +1,7 @@
+keras==2.2.5
+tensorflow-gpu==1.15.0
+opencv-python
+numpy
+scipy
+glob3
+matplotlib
