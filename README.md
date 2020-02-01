@@ -31,11 +31,11 @@
 	- 切换到requirements文件所在目录，执行命令`pip install -r requirements.txt`即可配置环境
 - 脚本运行说明
 	- 训练
-		- 命令行执行
-			- `python train.py -b 8`		
+	    - 命令行执行
+		- `python train.py -b 8`		
 	- 测试
-    		- 命令行执行
-    			- `python test.py`		
+	    - 命令行执行
+		- `python test.py`
 ## 模型构建
 - 密度等级分类模型，详见vggmodel.py
     - 使用vgg16作为特征提取网络，后接3个全连接层用于分类。密度等级0,1,2使用one-hot编码形式
