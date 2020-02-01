@@ -1,4 +1,4 @@
-# MSCNN
+# CrowCount
 基于mscnn的人群数量估计
 
 ## 项目简介
