@@ -15,10 +15,9 @@ import tensorflow as tf
 import keras.backend.tensorflow_backend as KTF
 from keras.callbacks import TensorBoard
 from model import MSCNN
-from data import MallDataset, ShanghaitechDataset, CrowDataset
+from data import CrowDataset
 import os
 
-ROOT_DIR = r'E:\code\crowcount'
 warnings.filterwarnings('ignore')
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -48,11 +47,8 @@ def get_callbacks():
     :return:
     """
     early_stopping = EarlyStopping(monitor='val_loss', patience=20)
-    reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1, patience=5, min_lr=1e-7, verbose=True)
-    models_path = os.path.join(ROOT_DIR, 'models')
-    if not os.path.exists(models_path):
-        os.mkdir(models_path)
-    model_checkpoint = ModelCheckpoint(os.path.join(models_path, 'mscnn_model_weights.h5'), monitor='val_loss',
+    reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1, patience=5, min_lr=1e-7, verbose=True)    
+    model_checkpoint = ModelCheckpoint('../models/mscnn_model_weights.h5'), monitor='val_loss',
                                        verbose=True, save_best_only=True, save_weights_only=True)
     callbacks = [early_stopping, reduce_lr, model_checkpoint, TensorBoard(log_dir='../tensorlog')]
     return callbacks
