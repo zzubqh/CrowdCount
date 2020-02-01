@@ -149,7 +149,7 @@ def predict():
     import glob
     import random
 
-    img_dir = r'E:\code\kesci\crowdcount\dataset\test'
+    img_dir = '../dataset/test'
     filenames = glob.glob(img_dir + r'\*.jpg')
     index_list = [i for i in range(len(filenames))]
     random.shuffle(index_list)
@@ -186,8 +186,8 @@ def imopen(im_path):
 
 def test():
     import tqdm
-    label_path = r'E:\code\kesci\crowdcount\result\dense_level.csv'
-    img_dir = r'E:\code\kesci\crowdcount\dataset\test'
+    label_path = '../result/dense_level.csv'
+    img_dir = '../dataset/test'
     img_name = []
     dense_gt = []
     with open(label_path, 'r') as rf:
