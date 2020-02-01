@@ -103,9 +103,9 @@ def predict():
     import glob
     from tqdm import tqdm
 
-    data_dir = r'crowdcount/dataset/test'
-    VGG_Model = r'crowdcount/src/models/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
-    Dense_Model = r'crowdcount/src/models/dense_model_weights.h5'
+    data_dir = '../dataset/test'
+    VGG_Model = '../models/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
+    Dense_Model = '../models/dense_model_weights.h5'
     Mscnn_Model = os.path.join(MODEL_PATH, 'mscnn_model_weights.h5')
 
     images = glob.glob(data_dir + r'\*.jpg')
