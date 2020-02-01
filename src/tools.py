@@ -12,9 +12,9 @@ import glob
 import json
 from scipy.io import savemat
 
-json_dir = r'E:\code\kesci\crowdcount\dataset\train\Mydata\temp\json'
-dense_label = r'E:\code\kesci\crowdcount\result\dense_level.csv'
-save_dir = r'E:\code\kesci\crowdcount\dataset\denselevel'
+json_dir = '../dataset/train/Mydata/temp/json'
+dense_label = '../result/dense_level.csv'
+save_dir = '../dataset/denselevel'
 
 
 class DataTools(object):
