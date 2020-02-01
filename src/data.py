@@ -21,7 +21,7 @@ Gauss_ksize = 3
 class CrowDataset(object):
     def __init__(self):
         mat_annotation = loadmat(os.path.join(MyDataPath, 'crow.mat'))
-        self.img_dir = r'crowdcount\dataset\train\Mydata\img'
+        self.img_dir = '../dataset/train/Mydata/img'
         self.filenames = mat_annotation['img']
         self.counts = mat_annotation['count']
         self.positions = mat_annotation['points']
@@ -180,8 +180,8 @@ class CrowDataset(object):
 # 2： 包含的人数大于100个
 class DenseDataset(object):
     def __init__(self):
-        mat_annotation = loadmat(r'crowdcount\dataset\denselevel\dense_gt.mat')
-        self.img_dir = r'crowdcount\dataset\denselevel\img'
+        mat_annotation = loadmat(r'../dataset/denselevel/dense_gt.mat')
+        self.img_dir = '../dataset/denselevel/img'
         self.filenames = mat_annotation['img']
         self.dense_level = mat_annotation['dense']
 
