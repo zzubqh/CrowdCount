@@ -5,10 +5,8 @@
 #=========================
 import os
 
-ROOT_DIR = r'E:\code\kesci\crowdcount\src\MSCNN-master'
+ROOT_DIR = r'E:\code\crowdcount'
 MODEL_PATH = os.path.join(ROOT_DIR, 'models')
-DATA_DIR = r'E:\code\kesci\crowdcount\dataset\train'
-MALL_DataPath = os.path.join(DATA_DIR, 'mall_dataset')
-Shanghaitech_DataPath = os.path.join(DATA_DIR, 'ShanghaiTech')
+DATA_DIR = r'E:\code\crowdcount\dataset'
 MyDataPath = os.path.join(DATA_DIR, 'Mydata')
 RESULT_PATH = os.path.join(ROOT_DIR, 'result')
